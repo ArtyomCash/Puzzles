@@ -1,5 +1,5 @@
 let area = document.getElementById('area');
-let cell = document.getElementsByClassName('cell');
+let box = document.getElementsByClassName('box');
 let currentPlayer = document.getElementById('curPlyr');
 
 let player = "x";
@@ -20,14 +20,14 @@ let winIndex = [
 ];
 
 for(let i = 1; i <= 9; i++) {
-    area.innerHTML += "<div class='cell' pos=" + i + "></div>";
+    area.innerHTML += "<div class='box' pos=" + i + "></div>";
 }
 
-for (let i = 0; i< cell.length; i++) {
-    cell[i].addEventListener('click', cellClick, false);
+for (let i = 0; i< box.length; i++) {
+    box[i].addEventListener('click', boxClick, false);
 }
 
-function cellClick() {
+function boxClick() {
 
     let data = [];
     
@@ -38,9 +38,9 @@ function cellClick() {
         return;
     }
 
-    for(let i in cell){
-        if(cell[i].innerHTML === player){
-            data.push(parseInt(cell[i].getAttribute('pos')));
+    for(let i in box){
+        if(box[i].innerHTML === player){
+            data.push(parseInt(box[i].getAttribute('pos')));
         }
     }
 
@@ -49,8 +49,8 @@ function cellClick() {
         restart("Выграл: " + player);
     }else {
         let draw = true;
-        for(let i in cell) {
-            if(cell[i].innerHTML === '') draw = false;
+        for(let i in box) {
+            if(box[i].innerHTML === '') draw = false;
         }
         if(draw) {
             stat.d += 1;
@@ -82,8 +82,8 @@ function checkWin(data) {
 function restart(text) {
     
     alert(text);
-    for(let i = 0; i < cell.length; i++) {
-        cell[i].innerHTML = '';
+    for(let i = 0; i < box.length; i++) {
+        box[i].innerHTML = '';
     }
     updateStat();
 }

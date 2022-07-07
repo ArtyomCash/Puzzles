@@ -3,14 +3,17 @@ body {
 }
 .row {
     display: flex;
-    height: 200px;
+    height: 100px;
 }
 .col {
-    width: 200px;
+    width: 100px;
     border: 1px solid black;
 }
 .images img {
     width: 100px;
     border: 1px solid black;
     cursor: pointer;
+}
+img {
+    width: 100px;
 }
