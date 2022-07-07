@@ -1,0 +1,16 @@
+body {
+    padding: 20px;
+}
+.row {
+    display: flex;
+    height: 200px;
+}
+.col {
+    width: 200px;
+    border: 1px solid black;
+}
+.images img {
+    width: 100px;
+    border: 1px solid black;
+    cursor: pointer;
+}
