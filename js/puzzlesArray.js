@@ -1,14 +1,14 @@
-// firstArea.innerHTML += `<div class="player" style="left: ${player.x}px; top: ${player.y}px;"></div>`;
 
+let puzzles = [
+    {id: 1, img: '1', text: 'пазл 1', class: 'red' },
+    {id: 2, img: '2', text: 'пазл 2', class: 'yellow' },
+    {id: 3, img: '3', text: 'пазл 3', class: 'green' },
+    {id: 4, img: '4', text: 'пазл 4', class: 'blue' },
+];
 
-// function newArea () {
-//     let newArea = document.querySelectorAll('.new-area');
-//     newArea.innerHTML += `<div class="firstArea"></div>`;
-    // newArea.style.width = '100px';
-    // newArea.style.height = '100px';
-    // newArea.style.backgroundColor = 'green';
-// }
-// newArea();
+let firstArea = document.querySelector('.first-area');
 
-let firstArea = document.getElementsByClassName('first-area');
+puzzles.map((item, index) => {
+    firstArea.innerHTML += `<div class="${item.class}">${item.text}</div>`
+});
 

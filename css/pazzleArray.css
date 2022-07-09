@@ -3,3 +3,23 @@
     height: 100px;
     background-color: green;
 }
+.puzzles,
+.red,
+.yellow,
+.green,
+.blue {
+    width: 100px;
+    height: 100px;
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
